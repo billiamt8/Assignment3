@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assignment3
 {
-    public partial class Homepage : UserControl
+    public partial class UC_Products : UserControl
     {
-        public Homepage()
+        public UC_Products()
         {
             InitializeComponent();
         }

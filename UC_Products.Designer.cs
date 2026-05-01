@@ -1,6 +1,6 @@
 ﻿namespace Assignment3
 {
-    partial class Homepage
+    partial class UC_Products
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Homepage
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Homepage";
-            this.Size = new System.Drawing.Size(872, 484);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
