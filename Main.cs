@@ -1,8 +1,8 @@
 namespace Assignment3
 {
-    public partial class MenuPage : Form
+    public partial class form : Form
     {
-        public MenuPage()
+        public form()
         {
             InitializeComponent();
             SetupLayout();
@@ -16,8 +16,8 @@ namespace Assignment3
             btnProducts.Click += (s, e) => ShowScreen(new UC_Products());
             btnBuildOrders.Click += (s, e) => ShowScreen(new UC_BuildOrders());
             btnCheckout.Click += (s, e) => ShowScreen(new UC_Checkout());
+            btnExit.Click += (s, e) => this.Close();
         }
- 
 
         private void ShowScreen(UserControl newScreen)
         {
@@ -55,13 +55,14 @@ namespace Assignment3
 
         private void HighlightButton(Button buttonToHighlight)
         {
-            btnHome.BackColor = Color.AliceBlue;
-            btnInventory.BackColor = Color.AliceBlue;
-            btnProducts.BackColor = Color.AliceBlue;
-            btnBuildOrders.BackColor = Color.AliceBlue;
-            btnCheckout.BackColor = Color.AliceBlue;
+            btnHome.BackColor = Color.Turquoise;
+            btnInventory.BackColor = Color.Turquoise;
+            btnProducts.BackColor = Color.Turquoise;
+            btnBuildOrders.BackColor = Color.Turquoise;
+            btnCheckout.BackColor = Color.Turquoise;
+            btnExit.BackColor = Color.Red;
 
-            buttonToHighlight.BackColor = Color.AntiqueWhite;
+            buttonToHighlight.BackColor = Color.Aquamarine;
         }
             
     }
