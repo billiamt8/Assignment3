@@ -16,5 +16,10 @@ namespace Assignment3
         {
             InitializeComponent();
         }
+
+        private void NameText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

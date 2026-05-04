@@ -30,11 +30,11 @@
         {
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.NavigationMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnBuildOrders = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.NavigationMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,72 +42,71 @@
             // 
             this.ContentPanel.Location = new System.Drawing.Point(12, 84);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(776, 354);
+            this.ContentPanel.Size = new System.Drawing.Size(894, 477);
             this.ContentPanel.TabIndex = 0;
             // 
             // NavigationMenu
             // 
-            this.NavigationMenu.Controls.Add(this.button5);
-            this.NavigationMenu.Controls.Add(this.button4);
-            this.NavigationMenu.Controls.Add(this.button3);
-            this.NavigationMenu.Controls.Add(this.button2);
-            this.NavigationMenu.Controls.Add(this.button1);
+            this.NavigationMenu.Controls.Add(this.btnCheckout);
+            this.NavigationMenu.Controls.Add(this.btnBuildOrders);
+            this.NavigationMenu.Controls.Add(this.btnProducts);
+            this.NavigationMenu.Controls.Add(this.btnInventory);
+            this.NavigationMenu.Controls.Add(this.btnHome);
             this.NavigationMenu.Location = new System.Drawing.Point(12, 12);
             this.NavigationMenu.Name = "NavigationMenu";
-            this.NavigationMenu.Size = new System.Drawing.Size(776, 66);
+            this.NavigationMenu.Size = new System.Drawing.Size(894, 66);
             this.NavigationMenu.TabIndex = 1;
             // 
-            // button1
+            // btnCheckout
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCheckout.Location = new System.Drawing.Point(507, 3);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(120, 60);
+            this.btnCheckout.TabIndex = 0;
+            this.btnCheckout.Text = "button5";
+            this.btnCheckout.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBuildOrders
             // 
-            this.button2.Location = new System.Drawing.Point(129, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuildOrders.Location = new System.Drawing.Point(381, 3);
+            this.btnBuildOrders.Name = "btnBuildOrders";
+            this.btnBuildOrders.Size = new System.Drawing.Size(120, 60);
+            this.btnBuildOrders.TabIndex = 3;
+            this.btnBuildOrders.Text = "button4";
+            this.btnBuildOrders.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnProducts
             // 
-            this.button3.Location = new System.Drawing.Point(255, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnProducts.Location = new System.Drawing.Point(255, 3);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(120, 60);
+            this.btnProducts.TabIndex = 2;
+            this.btnProducts.Text = "button3";
+            this.btnProducts.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnInventory
             // 
-            this.button4.Location = new System.Drawing.Point(381, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnInventory.Location = new System.Drawing.Point(129, 3);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(120, 60);
+            this.btnInventory.TabIndex = 1;
+            this.btnInventory.Text = "button2";
+            this.btnInventory.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnHome
             // 
-            this.button5.Location = new System.Drawing.Point(507, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 60);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnHome.Location = new System.Drawing.Point(3, 3);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(120, 60);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "button1";
+            this.btnHome.UseVisualStyleBackColor = true;
             // 
             // MenuPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(918, 573);
             this.Controls.Add(this.NavigationMenu);
             this.Controls.Add(this.ContentPanel);
             this.Name = "MenuPage";
@@ -121,10 +120,10 @@
 
         private Panel ContentPanel;
         private Panel NavigationMenu;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Button button5;
+        private Button btnBuildOrders;
+        private Button btnProducts;
+        private Button btnInventory;
+        private Button btnHome;
+        private Button btnCheckout;
     }
 }
