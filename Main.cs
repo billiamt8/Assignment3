@@ -1,8 +1,8 @@
 namespace Assignment3
 {
-    public partial class form : Form
+    public partial class Main : Form
     {
-        public form()
+        public Main()
         {
             InitializeComponent();
             SetupLayout();

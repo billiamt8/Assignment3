@@ -1,6 +1,6 @@
 ﻿namespace Assignment3
 {
-    partial class form
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,121 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlContent = new Panel();
-            pnlMenu = new Panel();
-            btnCheckout = new Button();
-            btnBuildOrders = new Button();
-            btnProducts = new Button();
-            btnInventory = new Button();
-            btnHome = new Button();
-            btnExit = new Button();
-            pnlMenu.SuspendLayout();
-            SuspendLayout();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnBuildOrders = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pnlContent
             // 
-            pnlContent.BackColor = Color.MintCream;
-            pnlContent.Location = new Point(26, 225);
-            pnlContent.Margin = new Padding(6, 7, 6, 7);
-            pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(1663, 1124);
-            pnlContent.TabIndex = 0;
+            this.pnlContent.BackColor = System.Drawing.Color.MintCream;
+            this.pnlContent.Location = new System.Drawing.Point(12, 91);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(776, 456);
+            this.pnlContent.TabIndex = 0;
             // 
             // pnlMenu
             // 
-            pnlMenu.BackColor = Color.DarkTurquoise;
-            pnlMenu.Controls.Add(btnCheckout);
-            pnlMenu.Controls.Add(btnBuildOrders);
-            pnlMenu.Controls.Add(btnProducts);
-            pnlMenu.Controls.Add(btnInventory);
-            pnlMenu.Controls.Add(btnHome);
-            pnlMenu.Location = new Point(26, 48);
-            pnlMenu.Margin = new Padding(6, 7, 6, 7);
-            pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(1663, 163);
-            pnlMenu.TabIndex = 1;
+            this.pnlMenu.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pnlMenu.Controls.Add(this.btnCheckout);
+            this.pnlMenu.Controls.Add(this.btnBuildOrders);
+            this.pnlMenu.Controls.Add(this.btnProducts);
+            this.pnlMenu.Controls.Add(this.btnInventory);
+            this.pnlMenu.Controls.Add(this.btnHome);
+            this.pnlMenu.Location = new System.Drawing.Point(12, 19);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(776, 66);
+            this.pnlMenu.TabIndex = 1;
             // 
             // btnCheckout
             // 
-            btnCheckout.BackColor = SystemColors.Control;
-            btnCheckout.Location = new Point(1086, 7);
-            btnCheckout.Margin = new Padding(6, 7, 6, 7);
-            btnCheckout.Name = "btnCheckout";
-            btnCheckout.Size = new Size(257, 148);
-            btnCheckout.TabIndex = 0;
-            btnCheckout.Text = "Checkout";
-            btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCheckout.Location = new System.Drawing.Point(507, 3);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(120, 60);
+            this.btnCheckout.TabIndex = 0;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = false;
             // 
             // btnBuildOrders
             // 
-            btnBuildOrders.BackColor = SystemColors.Control;
-            btnBuildOrders.Location = new Point(816, 7);
-            btnBuildOrders.Margin = new Padding(6, 7, 6, 7);
-            btnBuildOrders.Name = "btnBuildOrders";
-            btnBuildOrders.Size = new Size(257, 148);
-            btnBuildOrders.TabIndex = 3;
-            btnBuildOrders.Text = "Build Orders";
-            btnBuildOrders.UseVisualStyleBackColor = false;
+            this.btnBuildOrders.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBuildOrders.Location = new System.Drawing.Point(381, 3);
+            this.btnBuildOrders.Name = "btnBuildOrders";
+            this.btnBuildOrders.Size = new System.Drawing.Size(120, 60);
+            this.btnBuildOrders.TabIndex = 3;
+            this.btnBuildOrders.Text = "Build Orders";
+            this.btnBuildOrders.UseVisualStyleBackColor = false;
             // 
             // btnProducts
             // 
-            btnProducts.BackColor = SystemColors.Control;
-            btnProducts.Location = new Point(546, 7);
-            btnProducts.Margin = new Padding(6, 7, 6, 7);
-            btnProducts.Name = "btnProducts";
-            btnProducts.Size = new Size(257, 148);
-            btnProducts.TabIndex = 2;
-            btnProducts.Text = "Products";
-            btnProducts.UseVisualStyleBackColor = false;
+            this.btnProducts.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProducts.Location = new System.Drawing.Point(255, 3);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(120, 60);
+            this.btnProducts.TabIndex = 2;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.UseVisualStyleBackColor = false;
             // 
             // btnInventory
             // 
-            btnInventory.BackColor = SystemColors.Control;
-            btnInventory.Location = new Point(276, 7);
-            btnInventory.Margin = new Padding(6, 7, 6, 7);
-            btnInventory.Name = "btnInventory";
-            btnInventory.Size = new Size(257, 148);
-            btnInventory.TabIndex = 1;
-            btnInventory.Text = "Inventory";
-            btnInventory.UseVisualStyleBackColor = false;
+            this.btnInventory.BackColor = System.Drawing.SystemColors.Control;
+            this.btnInventory.Location = new System.Drawing.Point(129, 3);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(120, 60);
+            this.btnInventory.TabIndex = 1;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = false;
             // 
             // btnHome
             // 
-            btnHome.BackColor = SystemColors.Control;
-            btnHome.Location = new Point(6, 7);
-            btnHome.Margin = new Padding(6, 7, 6, 7);
-            btnHome.Name = "btnHome";
-            btnHome.Size = new Size(257, 148);
-            btnHome.TabIndex = 0;
-            btnHome.Text = "Home";
-            btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHome.Location = new System.Drawing.Point(3, 3);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(120, 60);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.Location = new Point(1671, -1);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(43, 43);
-            btnExit.TabIndex = 2;
-            btnExit.Text = "X";
-            btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Location = new System.Drawing.Point(780, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 17);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // form
+            // Main
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
-            ClientSize = new Size(1714, 1379);
-            Controls.Add(btnExit);
-            Controls.Add(pnlMenu);
-            Controls.Add(pnlContent);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6, 7, 6, 7);
-            Name = "form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menu";
-            pnlMenu.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlContent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
+            this.pnlMenu.ResumeLayout(false);
+            this.ResumeLayout(false);
 
         }
 

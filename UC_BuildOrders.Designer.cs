@@ -30,23 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // Homepage
+            // UC_BuildOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Homepage";
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Name = "UC_BuildOrders";
             this.Size = new System.Drawing.Size(872, 484);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel HomePnl1;
-        private Label NameText;
-        private Panel HomePnl2;
-        private Label DescriptionText;
-        private PictureBox pictureBox1;
-        private Panel HomePnl3;
     }
 }
