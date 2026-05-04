@@ -49,16 +49,17 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.pnlMenu.Controls.Add(this.btnCheckout);
-            this.pnlMenu.Controls.Add(this.btnBuildOrders);
-            this.pnlMenu.Controls.Add(this.btnProducts);
-            this.pnlMenu.Controls.Add(this.btnInventory);
-            this.pnlMenu.Controls.Add(this.btnHome);
-            this.pnlMenu.Location = new System.Drawing.Point(12, 19);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(776, 66);
-            this.pnlMenu.TabIndex = 1;
+            pnlMenu.BackColor = Color.LightSeaGreen;
+            pnlMenu.Controls.Add(btnCheckout);
+            pnlMenu.Controls.Add(btnBuildOrders);
+            pnlMenu.Controls.Add(btnProducts);
+            pnlMenu.Controls.Add(btnInventory);
+            pnlMenu.Controls.Add(btnHome);
+            pnlMenu.Location = new Point(26, 48);
+            pnlMenu.Margin = new Padding(6, 7, 6, 7);
+            pnlMenu.Name = "pnlMenu";
+            pnlMenu.Size = new Size(1663, 163);
+            pnlMenu.TabIndex = 1;
             // 
             // btnCheckout
             // 
