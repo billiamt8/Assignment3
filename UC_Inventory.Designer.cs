@@ -28,15 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(404, 167);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(121, 97);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // UC_Inventory
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MintCream;
-            Name = "UC_Inventory";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
+            this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Name = "UC_Inventory";
+            this.Size = new System.Drawing.Size(1001, 596);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
