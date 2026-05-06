@@ -140,11 +140,6 @@ namespace Assignment3
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string searchTerm = txtDelete.Text.Trim();
