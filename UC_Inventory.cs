@@ -42,7 +42,7 @@ namespace Assignment3
 
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAddProduct_Click(object sender, EventArgs e)
         {
             // 1. Validation
             if (!ValidateInputs()) return;
@@ -102,7 +102,7 @@ namespace Assignment3
             txtQuantity.Clear();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
             // 1. Check if a Product ID is present to identify the record
             if (!int.TryParse(txtID.Text, out int idToUpdate))
