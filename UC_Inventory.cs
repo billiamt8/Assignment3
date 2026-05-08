@@ -20,7 +20,7 @@ namespace Assignment3
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
 
-        string filePath = "./shop-product-catalog.csv";
+        string filePath = "./products-100.csv";
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
@@ -50,11 +50,13 @@ namespace Assignment3
             // 2. Create the new product
             int newId = _inventoryList.Count + 1000;
             string name = txtName.Text;
+            string description = txtDescription.Text;
             string brand = txtBrand.Text;
+            string category = txtCategory.Text;
             decimal price = decimal.Parse(txtPrice.Text);
             int quantity = int.Parse(txtQuantity.Text);
 
-            Product newProduct = new Product(newId, name, brand, price, quantity);
+            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity);
             _inventoryList.Add(newProduct);
 
             // 4. Refresh the grid to show the new item
@@ -107,7 +109,7 @@ namespace Assignment3
             // 1. Check if a Product ID is present to identify the record
             if (!int.TryParse(txtID.Text, out int idToUpdate))
             {
-                MessageBox.Show("Please select a product from the grid to update.");
+                MessageBox.Show("Please select a product to update.");
                 return;
             }
 
@@ -131,7 +133,7 @@ namespace Assignment3
 
                     // 6. Clear input fields
                     ClearFields();
-                    MessageBox.Show("Product updated successfully in the list.");
+                    MessageBox.Show("Product successfully updated in the list.");
                 }
             }
             else
@@ -146,7 +148,7 @@ namespace Assignment3
 
             if (string.IsNullOrWhiteSpace(searchTerm))
             {
-                MessageBox.Show("Please enter a Product ID or Name to delete.");
+                MessageBox.Show("Please enter a Product ID/Name to delete.");
                 return;
             }
 
