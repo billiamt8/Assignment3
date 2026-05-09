@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,6 +55,7 @@ namespace Assignment3
             string brand = txtBrand.Text;
             string category = txtCategory.Text;
             decimal price = decimal.Parse(txtPrice.Text);
+            string currency = txtCurrency.Text;
             int quantity = int.Parse(txtQuantity.Text);
 
             Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity);
@@ -99,8 +101,11 @@ namespace Assignment3
         {
             txtID.Clear();
             txtName.Clear();
+            txtDescription.Clear();
             txtBrand.Clear();
+            txtCategory.Clear();
             txtPrice.Clear();
+            txtCurrency.Clear();
             txtQuantity.Clear();
         }
 
@@ -201,7 +206,18 @@ namespace Assignment3
             }
         }
 
+
         private void btnClearProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCurrency_TextChanged(object sender, EventArgs e)
         {
 
         }
