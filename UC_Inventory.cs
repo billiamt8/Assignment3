@@ -13,15 +13,14 @@ namespace Assignment3
 {
     public partial class UC_Inventory : UserControl
     {
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
+        private BindingSource _bindingSource = new BindingSource();
+        private string filePath = "./products-100.csv";
+
         public UC_Inventory()
         {
             InitializeComponent();
         }
-        // Inside UC_Inventory.cs
-        private BindingList<Product> _inventoryList = new BindingList<Product>();
-        private BindingSource _bindingSource = new BindingSource();
-
-        string filePath = "./products-100.csv";
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
@@ -57,8 +56,10 @@ namespace Assignment3
             decimal price = decimal.Parse(txtPrice.Text);
             string currency = txtCurrency.Text;
             int quantity = int.Parse(txtQuantity.Text);
+            int ean = int.Parse(txtEAN.Text);
+            string color = txtColor.Text;
 
-            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity);
+            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity, ean, color);
             _inventoryList.Add(newProduct);
 
             // 4. Refresh the grid to show the new item
@@ -107,6 +108,8 @@ namespace Assignment3
             txtPrice.Clear();
             txtCurrency.Clear();
             txtQuantity.Clear();
+            txtEAN.Clear();
+            txtColor.Clear();
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
