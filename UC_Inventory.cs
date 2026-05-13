@@ -71,22 +71,19 @@ namespace Assignment3
 
         private bool ValidateInputs()
         {
-            // Check if Name contains invalid special characters like #, $, @
-            // This regex allows only letters, numbers, and spaces
+
             if (!Regex.IsMatch(txtName.Text, @"^[a-zA-Z0-9 ]+$"))
             {
                 MessageBox.Show("Product Name contains invalid characters.");
                 return false;
             }
 
-            // Check if Price is a positive decimal
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
             {
                 MessageBox.Show("Please enter a valid positive price.");
                 return false;
             }
 
-            // Check if Quantity is a positive integer
             if (!int.TryParse(txtQuantity.Text, out int qty) || qty < 0)
             {
                 MessageBox.Show("Please enter a valid positive quantity.");
@@ -131,9 +128,14 @@ namespace Assignment3
                 {
                     // 4. Update the object properties (excluding ProductID)
                     productToUpdate.ProductName = txtName.Text;
+                    productToUpdate.ProductDescription = txtDescription.Text;
                     productToUpdate.ProductBrand = txtBrand.Text;
+                    productToUpdate.ProductCategory = txtCategory.Text;
                     productToUpdate.ProductPrice = decimal.Parse(txtPrice.Text);
+                    productToUpdate.ProductCurrency = txtCurrency.Text;
                     productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
+                    productToUpdate.ProductEAN = int.Parse(txtEAN.Text);
+                    productToUpdate.ProductColor = txtColor.Text;
 
                     // 5. Refresh the grid to show the updated data
                     _bindingSource.ResetBindings(false);

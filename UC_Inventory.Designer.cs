@@ -198,6 +198,7 @@
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.Size = new System.Drawing.Size(157, 23);
             this.txtCurrency.TabIndex = 13;
+            this.txtCurrency.Click += new System.EventHandler(this.txtCurrency_TextChanged);
             // 
             // txtCategory
             // 
