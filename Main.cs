@@ -1,13 +1,18 @@
+using System.ComponentModel;
+
 namespace Assignment3
 {
     public partial class Main : Form
     {
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
+        private string filePath = "./products-100.csv";
         public Main()
         {
             InitializeComponent();
             SetupLayout();
             ShowScreen(new UC_Home());
         }
+
 
         private void SetupLayout()
         {
@@ -16,7 +21,6 @@ namespace Assignment3
             btnProducts.Click += (s, e) => ShowScreen(new UC_Products());
             btnBuildOrders.Click += (s, e) => ShowScreen(new UC_BuildOrders());
             btnCheckout.Click += (s, e) => ShowScreen(new UC_Checkout());
-            btnExit.Click += (s, e) => this.Close();
         }
 
         private void ShowScreen(UserControl newScreen)
@@ -63,6 +67,31 @@ namespace Assignment3
 
             buttonToHighlight.BackColor = Color.Aquamarine;
         }
-            
+
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("There are unsaved changes, do you want to save them?",
+            "Save changes", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+                try
+                {
+                    string path = filePath;
+
+                    List<Product> listToSave = _inventoryList.ToList();
+
+                    InventoryService.SaveToCSV(path, listToSave);
+
+                    MessageBox.Show("Changes saved successfully.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving data: " + ex.Message);
+                }
+            else
+                Close();
+        }
     }
 }

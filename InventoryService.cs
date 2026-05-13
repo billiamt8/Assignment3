@@ -32,10 +32,10 @@ namespace Assignment3
                         decimal price = decimal.Parse(parts[5]) / 100m;
                         string currency = parts[6];
                         int quantity = int.Parse(parts[7]);
-                        int EAN = int.Parse(parts[8]);
+                        int ean = int.Parse(parts[8]);
                         string color = parts[9];
 
-                        products.Add(new Product(id, name, description, brand, category, price, currency, quantity));
+                        products.Add(new Product(id, name, description, brand, category, price, currency, quantity, ean, color));
                     }
                     catch
                     {
@@ -56,7 +56,7 @@ namespace Assignment3
                 foreach (var p in products)
                 {
                     // Converts price back to cents for storage and includes quantity
-                    string line = $"{p.ProductID},{p.ProductName},{p.ProductDescription},{p.ProductBrand},{p.ProductCategory},{p.ProductPrice * 100},{p.ProductCurrency},{p.ProductQuantity}";
+                    string line = $"{p.ProductID},{p.ProductName},{p.ProductDescription},{p.ProductBrand},{p.ProductCategory},{p.ProductPrice * 100},{p.ProductCurrency},{p.ProductQuantity},{p.ProductEAN}";
                     writer.WriteLine(line);
                 }
             }

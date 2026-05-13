@@ -16,8 +16,10 @@ namespace Assignment3
         public decimal ProductPrice { get; set; }
         public string ProductCurrency { get; set; }
         public int ProductQuantity { get; set; }
+        public int ProductEAN { get; set; }
+        public string ProductColor { get; set; }
 
-        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity)
+        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity, int ean, string color)
         {
             ProductID = id;
             ProductName = name;
@@ -27,6 +29,8 @@ namespace Assignment3
             ProductPrice = price;
             ProductCurrency = currency;
             ProductQuantity = quantity;
+            ProductEAN = ean;
+            ProductColor = color;
         }
 
     }

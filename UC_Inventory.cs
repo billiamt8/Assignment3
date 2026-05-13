@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,14 +13,18 @@ namespace Assignment3
 {
     public partial class UC_Inventory : UserControl
     {
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
+        private BindingSource _bindingSource = new BindingSource();
+        private string filePath = "./products-100.csv";
+
         public UC_Inventory()
         {
             InitializeComponent();
         }
-        private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-
-        string filePath = "./products-100.csv";
+        private BindingSource _bindingSource = new BindingSource();
+        private BindingSource _bindingSource = new BindingSource();
+        private BindingSource _bindingSource = new BindingSource();
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
@@ -55,8 +60,10 @@ namespace Assignment3
             decimal price = decimal.Parse(txtPrice.Text);
             string currency = txtCurrency.Text;
             int quantity = int.Parse(txtQuantity.Text);
+            int ean = int.Parse(txtEAN.Text);
+            string color = txtColor.Text;
 
-            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity);
+            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity, ean, color);
             _inventoryList.Add(newProduct);
 
             // 4. Refresh the grid to show the new item
@@ -68,22 +75,19 @@ namespace Assignment3
 
         private bool ValidateInputs()
         {
-            // Check if Name contains invalid special characters like #, $, @
-            // This regex allows only letters, numbers, and spaces
+
             if (!Regex.IsMatch(txtName.Text, @"^[a-zA-Z0-9 ]+$"))
             {
                 MessageBox.Show("Product Name contains invalid characters.");
                 return false;
             }
 
-            // Check if Price is a positive decimal
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
             {
                 MessageBox.Show("Please enter a valid positive price.");
                 return false;
             }
 
-            // Check if Quantity is a positive integer
             if (!int.TryParse(txtQuantity.Text, out int qty) || qty < 0)
             {
                 MessageBox.Show("Please enter a valid positive quantity.");
@@ -99,9 +103,14 @@ namespace Assignment3
         {
             txtID.Clear();
             txtName.Clear();
+            txtDescription.Clear();
             txtBrand.Clear();
+            txtCategory.Clear();
             txtPrice.Clear();
+            txtCurrency.Clear();
             txtQuantity.Clear();
+            txtEAN.Clear();
+            txtColor.Clear();
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
@@ -123,9 +132,14 @@ namespace Assignment3
                 {
                     // 4. Update the object properties (excluding ProductID)
                     productToUpdate.ProductName = txtName.Text;
+                    productToUpdate.ProductDescription = txtDescription.Text;
                     productToUpdate.ProductBrand = txtBrand.Text;
+                    productToUpdate.ProductCategory = txtCategory.Text;
                     productToUpdate.ProductPrice = decimal.Parse(txtPrice.Text);
+                    productToUpdate.ProductCurrency = txtCurrency.Text;
                     productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
+                    productToUpdate.ProductEAN = int.Parse(txtEAN.Text);
+                    productToUpdate.ProductColor = txtColor.Text;
 
                     // 5. Refresh the grid to show the updated data
                     _bindingSource.ResetBindings(false);
@@ -201,7 +215,18 @@ namespace Assignment3
             }
         }
 
+
         private void btnClearProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCurrency_TextChanged(object sender, EventArgs e)
         {
 
         }
