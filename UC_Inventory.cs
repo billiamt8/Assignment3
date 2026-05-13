@@ -21,10 +21,7 @@ namespace Assignment3
         {
             InitializeComponent();
         }
-        private BindingSource _bindingSource = new BindingSource();
-        private BindingSource _bindingSource = new BindingSource();
-        private BindingSource _bindingSource = new BindingSource();
-        private BindingSource _bindingSource = new BindingSource();
+
 
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
