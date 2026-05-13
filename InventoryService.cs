@@ -20,8 +20,7 @@ namespace Assignment3
             {
                 string[] parts = line.Split(',');
 
-                // Now checking for exactly 4 columns as per new header
-                if (parts.Length >= 11)
+                if (parts.Length >= 12)
                 {
                     try
                     {
@@ -33,6 +32,8 @@ namespace Assignment3
                         decimal price = decimal.Parse(parts[5]) / 100m;
                         string currency = parts[6];
                         int quantity = int.Parse(parts[7]);
+                        int EAN = int.Parse(parts[8]);
+                        string color = parts[9];
 
                         products.Add(new Product(id, name, description, brand, category, price, currency, quantity));
                     }

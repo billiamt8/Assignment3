@@ -50,7 +50,6 @@ namespace Assignment3
             {
                 HighlightButton(btnProducts);
             }
-
         }
 
         private void HighlightButton(Button buttonToHighlight)

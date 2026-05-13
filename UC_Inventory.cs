@@ -16,7 +16,6 @@ namespace Assignment3
         {
             InitializeComponent();
         }
-        // Inside UC_Inventory.cs
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
 
@@ -54,6 +53,7 @@ namespace Assignment3
             string brand = txtBrand.Text;
             string category = txtCategory.Text;
             decimal price = decimal.Parse(txtPrice.Text);
+            string currency = txtCurrency.Text;
             int quantity = int.Parse(txtQuantity.Text);
 
             Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity);

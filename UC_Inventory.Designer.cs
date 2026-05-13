@@ -35,6 +35,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlProductDetails = new System.Windows.Forms.Panel();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnClearProduct = new System.Windows.Forms.Button();
             this.txtBrand = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.lblDeleteProduct = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.dgvColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtCurrency = new System.Windows.Forms.TextBox();
             this.pnlProductDetails.SuspendLayout();
             this.pnlDeleteProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -111,7 +112,8 @@
             // 
             // pnlProductDetails
             // 
-            this.pnlProductDetails.Controls.Add(this.txt);
+            this.pnlProductDetails.Controls.Add(this.txtCurrency);
+            this.pnlProductDetails.Controls.Add(this.txtCategory);
             this.pnlProductDetails.Controls.Add(this.txtDescription);
             this.pnlProductDetails.Controls.Add(this.btnClearProduct);
             this.pnlProductDetails.Controls.Add(this.txtBrand);
@@ -128,6 +130,13 @@
             this.pnlProductDetails.Name = "pnlProductDetails";
             this.pnlProductDetails.Size = new System.Drawing.Size(256, 298);
             this.pnlProductDetails.TabIndex = 3;
+            // 
+            // txtCategory
+            // 
+            this.txtCategory.Location = new System.Drawing.Point(79, 182);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(157, 23);
+            this.txtCategory.TabIndex = 13;
             // 
             // txtDescription
             // 
@@ -265,12 +274,12 @@
             this.dgvColumnID.HeaderText = "ID";
             this.dgvColumnID.Name = "dgvColumnID";
             // 
-            // txt
+            // txtCurrency
             // 
-            this.txt.Location = new System.Drawing.Point(79, 182);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(157, 23);
-            this.txt.TabIndex = 13;
+            this.txtCurrency.Location = new System.Drawing.Point(79, 211);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Size = new System.Drawing.Size(157, 23);
+            this.txtCurrency.TabIndex = 13;
             // 
             // UC_Inventory
             // 
@@ -323,6 +332,7 @@
         private DataGridView dgvInventory;
         private DataGridViewTextBoxColumn dgvColumnID;
         private TextBox txtDescription;
-        private TextBox txt;
+        private TextBox txtCategory;
+        private TextBox txtCurrency;
     }
 }
