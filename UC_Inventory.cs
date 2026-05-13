@@ -215,17 +215,7 @@ namespace Assignment3
 
         private void btnClearProduct_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtQuantity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCurrency_TextChanged(object sender, EventArgs e)
-        {
-
+            ClearFields();
         }
     }
 }
