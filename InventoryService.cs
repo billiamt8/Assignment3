@@ -51,12 +51,12 @@ namespace Assignment3
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Match header exactly
-                writer.WriteLine("ProductID,ProductName,ProductDescription,ProductBrand,ProductCategory,Price,ProductCurrency,Quantity");
+                writer.WriteLine("ProductID,ProductName,ProductDescription,ProductBrand,ProductCategory,Price,ProductCurrency,Quantity,ProductEAN,ProductColor");
 
                 foreach (var p in products)
                 {
                     // Converts price back to cents for storage and includes quantity
-                    string line = $"{p.ProductID},{p.ProductName},{p.ProductDescription},{p.ProductBrand},{p.ProductCategory},{p.ProductPrice * 100},{p.ProductCurrency},{p.ProductQuantity},{p.ProductEAN}";
+                    string line = $"{p.ProductID},{p.ProductName},{p.ProductDescription},{p.ProductBrand},{p.ProductCategory},{p.ProductPrice * 100},{p.ProductCurrency},{p.ProductQuantity},{p.ProductEAN},{p.ProductColor}";
                     writer.WriteLine(line);
                 }
             }
