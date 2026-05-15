@@ -37,30 +37,30 @@
             // dgvAvailable
             // 
             this.dgvAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvailable.Location = new System.Drawing.Point(3, 3);
+            this.dgvAvailable.Location = new System.Drawing.Point(206, 140);
             this.dgvAvailable.Name = "dgvAvailable";
             this.dgvAvailable.RowTemplate.Height = 25;
-            this.dgvAvailable.Size = new System.Drawing.Size(240, 150);
+            this.dgvAvailable.Size = new System.Drawing.Size(230, 272);
             this.dgvAvailable.TabIndex = 0;
+            this.dgvAvailable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvAvailable_MouseDown);
             // 
             // dgvCurrentOrder
             // 
             this.dgvCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCurrentOrder.Location = new System.Drawing.Point(339, 3);
+            this.dgvCurrentOrder.Location = new System.Drawing.Point(567, 95);
             this.dgvCurrentOrder.Name = "dgvCurrentOrder";
             this.dgvCurrentOrder.RowTemplate.Height = 25;
-            this.dgvCurrentOrder.Size = new System.Drawing.Size(530, 397);
+            this.dgvCurrentOrder.Size = new System.Drawing.Size(240, 150);
             this.dgvCurrentOrder.TabIndex = 1;
             // 
             // UC_BuildOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
             this.Controls.Add(this.dgvCurrentOrder);
             this.Controls.Add(this.dgvAvailable);
             this.Name = "UC_BuildOrders";
-            this.Size = new System.Drawing.Size(872, 484);
+            this.Size = new System.Drawing.Size(869, 521);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrder)).EndInit();
             this.ResumeLayout(false);
