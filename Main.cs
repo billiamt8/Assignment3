@@ -72,25 +72,10 @@ namespace Assignment3
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("There are unsaved changes, do you want to save them?",
-            "Save changes", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?",
+            "Exit", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)
-                try
-                {
-                    string path = filePath;
-
-                    List<Product> listToSave = _inventoryList.ToList();
-
-                    InventoryService.SaveToCSV(path, listToSave);
-
-                    MessageBox.Show("Changes saved successfully.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error saving data: " + ex.Message);
-                }
-            else
                 Close();
         }
     }

@@ -28,42 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvAvailable = new System.Windows.Forms.DataGridView();
-            this.dgvCurrentOrder = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrder)).BeginInit();
-            this.SuspendLayout();
+            dgvAvailable = new DataGridView();
+            dgvCurrentOrder = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAvailable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCurrentOrder).BeginInit();
+            SuspendLayout();
             // 
             // dgvAvailable
             // 
-            this.dgvAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvailable.Location = new System.Drawing.Point(206, 140);
-            this.dgvAvailable.Name = "dgvAvailable";
-            this.dgvAvailable.RowTemplate.Height = 25;
-            this.dgvAvailable.Size = new System.Drawing.Size(230, 272);
-            this.dgvAvailable.TabIndex = 0;
-            this.dgvAvailable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvAvailable_MouseDown);
+            dgvAvailable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAvailable.Location = new Point(6, 7);
+            dgvAvailable.Margin = new Padding(6, 7, 6, 7);
+            dgvAvailable.Name = "dgvAvailable";
+            dgvAvailable.RowHeadersWidth = 92;
+            dgvAvailable.RowTemplate.Height = 25;
+            dgvAvailable.Size = new Size(493, 671);
+            dgvAvailable.TabIndex = 0;
+            dgvAvailable.MouseDown += dgvAvailable_MouseDown;
             // 
             // dgvCurrentOrder
             // 
-            this.dgvCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCurrentOrder.Location = new System.Drawing.Point(567, 95);
-            this.dgvCurrentOrder.Name = "dgvCurrentOrder";
-            this.dgvCurrentOrder.RowTemplate.Height = 25;
-            this.dgvCurrentOrder.Size = new System.Drawing.Size(240, 150);
-            this.dgvCurrentOrder.TabIndex = 1;
+            dgvCurrentOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCurrentOrder.Location = new Point(575, 7);
+            dgvCurrentOrder.Margin = new Padding(6, 7, 6, 7);
+            dgvCurrentOrder.Name = "dgvCurrentOrder";
+            dgvCurrentOrder.RowHeadersWidth = 92;
+            dgvCurrentOrder.RowTemplate.Height = 25;
+            dgvCurrentOrder.Size = new Size(782, 671);
+            dgvCurrentOrder.TabIndex = 1;
             // 
             // UC_BuildOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvCurrentOrder);
-            this.Controls.Add(this.dgvAvailable);
-            this.Name = "UC_BuildOrders";
-            this.Size = new System.Drawing.Size(869, 521);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrder)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dgvCurrentOrder);
+            Controls.Add(dgvAvailable);
+            Margin = new Padding(6, 7, 6, 7);
+            Name = "UC_BuildOrders";
+            Size = new Size(1862, 1285);
+            ((System.ComponentModel.ISupportInitialize)dgvAvailable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCurrentOrder).EndInit();
+            ResumeLayout(false);
 
         }
 

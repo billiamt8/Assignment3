@@ -27,17 +27,14 @@ namespace Assignment3
         {
             string path = filePath;
 
-            // 1. Load the data into a temporary list
             var tempData = InventoryService.LoadFromCSV(path);
 
-            // 2. Clear the BindingList and add the loaded data
             _inventoryList.Clear();
             foreach (var item in tempData)
             {
                 _inventoryList.Add(item);
             }
 
-            // 3. Bind the BindingList to the grid
             dgvInventory.DataSource = _inventoryList;
         }
 
