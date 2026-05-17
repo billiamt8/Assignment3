@@ -47,7 +47,7 @@ namespace Assignment3
             if (!ValidateInputs()) return;
 
             // 2. Create the new product
-            int newId = _inventoryList.Count + 1000;
+            int newId = _inventoryList.Count + 1;
             string name = txtName.Text;
             string description = txtDescription.Text;
             string brand = txtBrand.Text;

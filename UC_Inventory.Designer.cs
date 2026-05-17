@@ -34,19 +34,9 @@
             btnAddProduct = new Button();
             btnUpdateProduct = new Button();
             dgvInventory = new DataGridView();
-            columnID = new DataGridViewTextBoxColumn();
-            columnName = new DataGridViewTextBoxColumn();
-            columnDescription = new DataGridViewTextBoxColumn();
-            columnBrand = new DataGridViewTextBoxColumn();
-            columnCategory = new DataGridViewTextBoxColumn();
-            columnPrice = new DataGridViewTextBoxColumn();
-            columnCurrency = new DataGridViewTextBoxColumn();
-            columnQuantity = new DataGridViewTextBoxColumn();
-            columnEAN = new DataGridViewTextBoxColumn();
-            columnColor = new DataGridViewTextBoxColumn();
-            columnSize = new DataGridViewTextBoxColumn();
-            columnAvailability = new DataGridViewTextBoxColumn();
             gbProductDetails = new GroupBox();
+            txtInternalID = new TextBox();
+            lblInternalID = new Label();
             txtAvailability = new TextBox();
             txtSize = new TextBox();
             lblAvailability = new Label();
@@ -73,8 +63,19 @@
             txtDescription = new TextBox();
             lblQuantity = new Label();
             gbDeleteProduct = new GroupBox();
-            lblInternalID = new Label();
-            txtInternalID = new TextBox();
+            columnID = new DataGridViewTextBoxColumn();
+            columnName = new DataGridViewTextBoxColumn();
+            columnDescription = new DataGridViewTextBoxColumn();
+            columnBrand = new DataGridViewTextBoxColumn();
+            columnCategory = new DataGridViewTextBoxColumn();
+            columnPrice = new DataGridViewTextBoxColumn();
+            columnCurrency = new DataGridViewTextBoxColumn();
+            columnQuantity = new DataGridViewTextBoxColumn();
+            columnEAN = new DataGridViewTextBoxColumn();
+            columnColor = new DataGridViewTextBoxColumn();
+            columnSize = new DataGridViewTextBoxColumn();
+            columnAvailability = new DataGridViewTextBoxColumn();
+            columnInternalID = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             gbProductDetails.SuspendLayout();
             gbDeleteProduct.SuspendLayout();
@@ -139,7 +140,7 @@
             dgvInventory.AllowDrop = true;
             dgvInventory.AllowUserToOrderColumns = true;
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { columnID, columnName, columnDescription, columnBrand, columnCategory, columnPrice, columnCurrency, columnQuantity, columnEAN, columnColor, columnSize, columnAvailability });
+            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { columnID, columnName, columnDescription, columnBrand, columnCategory, columnPrice, columnCurrency, columnQuantity, columnEAN, columnColor, columnSize, columnAvailability, columnInternalID });
             dgvInventory.Location = new Point(615, 10);
             dgvInventory.Margin = new Padding(6, 7, 6, 7);
             dgvInventory.MultiSelect = false;
@@ -149,102 +150,6 @@
             dgvInventory.RowTemplate.Height = 25;
             dgvInventory.Size = new Size(1041, 1110);
             dgvInventory.TabIndex = 12;
-            // 
-            // columnID
-            // 
-            columnID.HeaderText = "ID";
-            columnID.MinimumWidth = 11;
-            columnID.Name = "columnID";
-            columnID.ReadOnly = true;
-            columnID.Width = 225;
-            // 
-            // columnName
-            // 
-            columnName.HeaderText = "Name";
-            columnName.MinimumWidth = 11;
-            columnName.Name = "columnName";
-            columnName.ReadOnly = true;
-            columnName.Width = 225;
-            // 
-            // columnDescription
-            // 
-            columnDescription.HeaderText = "Description";
-            columnDescription.MinimumWidth = 11;
-            columnDescription.Name = "columnDescription";
-            columnDescription.ReadOnly = true;
-            columnDescription.Width = 225;
-            // 
-            // columnBrand
-            // 
-            columnBrand.HeaderText = "Brand";
-            columnBrand.MinimumWidth = 11;
-            columnBrand.Name = "columnBrand";
-            columnBrand.ReadOnly = true;
-            columnBrand.Width = 225;
-            // 
-            // columnCategory
-            // 
-            columnCategory.HeaderText = "Category";
-            columnCategory.MinimumWidth = 11;
-            columnCategory.Name = "columnCategory";
-            columnCategory.ReadOnly = true;
-            columnCategory.Width = 225;
-            // 
-            // columnPrice
-            // 
-            columnPrice.HeaderText = "Price";
-            columnPrice.MinimumWidth = 11;
-            columnPrice.Name = "columnPrice";
-            columnPrice.ReadOnly = true;
-            columnPrice.Width = 225;
-            // 
-            // columnCurrency
-            // 
-            columnCurrency.HeaderText = "Currency";
-            columnCurrency.MinimumWidth = 11;
-            columnCurrency.Name = "columnCurrency";
-            columnCurrency.ReadOnly = true;
-            columnCurrency.Width = 225;
-            // 
-            // columnQuantity
-            // 
-            columnQuantity.HeaderText = "Quantity";
-            columnQuantity.MinimumWidth = 11;
-            columnQuantity.Name = "columnQuantity";
-            columnQuantity.ReadOnly = true;
-            columnQuantity.Width = 225;
-            // 
-            // columnEAN
-            // 
-            columnEAN.HeaderText = "EAN";
-            columnEAN.MinimumWidth = 11;
-            columnEAN.Name = "columnEAN";
-            columnEAN.ReadOnly = true;
-            columnEAN.Width = 225;
-            // 
-            // columnColor
-            // 
-            columnColor.HeaderText = "Color";
-            columnColor.MinimumWidth = 11;
-            columnColor.Name = "columnColor";
-            columnColor.ReadOnly = true;
-            columnColor.Width = 225;
-            // 
-            // columnSize
-            // 
-            columnSize.HeaderText = "Size";
-            columnSize.MinimumWidth = 11;
-            columnSize.Name = "columnSize";
-            columnSize.ReadOnly = true;
-            columnSize.Width = 225;
-            // 
-            // columnAvailability
-            // 
-            columnAvailability.HeaderText = "Availability";
-            columnAvailability.MinimumWidth = 11;
-            columnAvailability.Name = "columnAvailability";
-            columnAvailability.ReadOnly = true;
-            columnAvailability.Width = 225;
             // 
             // gbProductDetails
             // 
@@ -281,6 +186,22 @@
             gbProductDetails.TabIndex = 13;
             gbProductDetails.TabStop = false;
             gbProductDetails.Text = "Product Details";
+            // 
+            // txtInternalID
+            // 
+            txtInternalID.Location = new Point(169, 708);
+            txtInternalID.Name = "txtInternalID";
+            txtInternalID.Size = new Size(332, 43);
+            txtInternalID.TabIndex = 22;
+            // 
+            // lblInternalID
+            // 
+            lblInternalID.AutoSize = true;
+            lblInternalID.Location = new Point(19, 711);
+            lblInternalID.Name = "lblInternalID";
+            lblInternalID.Size = new Size(140, 37);
+            lblInternalID.TabIndex = 21;
+            lblInternalID.Text = "Internal ID";
             // 
             // txtAvailability
             // 
@@ -413,6 +334,7 @@
             txtID.Location = new Point(169, 41);
             txtID.Margin = new Padding(6, 7, 6, 7);
             txtID.Name = "txtID";
+            txtID.ReadOnly = true;
             txtID.Size = new Size(332, 43);
             txtID.TabIndex = 1;
             // 
@@ -514,21 +436,122 @@
             gbDeleteProduct.TabStop = false;
             gbDeleteProduct.Text = "Delete Product with ID/Name";
             // 
-            // lblInternalID
+            // columnID
             // 
-            lblInternalID.AutoSize = true;
-            lblInternalID.Location = new Point(19, 711);
-            lblInternalID.Name = "lblInternalID";
-            lblInternalID.Size = new Size(140, 37);
-            lblInternalID.TabIndex = 21;
-            lblInternalID.Text = "Internal ID";
+            columnID.DataPropertyName = "ProductID";
+            columnID.HeaderText = "ID";
+            columnID.MinimumWidth = 11;
+            columnID.Name = "columnID";
+            columnID.ReadOnly = true;
+            columnID.Width = 225;
             // 
-            // txtInternalID
+            // columnName
             // 
-            txtInternalID.Location = new Point(169, 708);
-            txtInternalID.Name = "txtInternalID";
-            txtInternalID.Size = new Size(332, 43);
-            txtInternalID.TabIndex = 22;
+            columnName.DataPropertyName = "ProductName";
+            columnName.HeaderText = "Name";
+            columnName.MinimumWidth = 11;
+            columnName.Name = "columnName";
+            columnName.ReadOnly = true;
+            columnName.Width = 225;
+            // 
+            // columnDescription
+            // 
+            columnDescription.DataPropertyName = "ProductDescription";
+            columnDescription.HeaderText = "Description";
+            columnDescription.MinimumWidth = 11;
+            columnDescription.Name = "columnDescription";
+            columnDescription.ReadOnly = true;
+            columnDescription.Width = 225;
+            // 
+            // columnBrand
+            // 
+            columnBrand.DataPropertyName = "ProductBrand";
+            columnBrand.HeaderText = "Brand";
+            columnBrand.MinimumWidth = 11;
+            columnBrand.Name = "columnBrand";
+            columnBrand.ReadOnly = true;
+            columnBrand.Width = 225;
+            // 
+            // columnCategory
+            // 
+            columnCategory.DataPropertyName = "ProductCategory";
+            columnCategory.HeaderText = "Category";
+            columnCategory.MinimumWidth = 11;
+            columnCategory.Name = "columnCategory";
+            columnCategory.ReadOnly = true;
+            columnCategory.Width = 225;
+            // 
+            // columnPrice
+            // 
+            columnPrice.DataPropertyName = "ProductPrice";
+            columnPrice.HeaderText = "Price";
+            columnPrice.MinimumWidth = 11;
+            columnPrice.Name = "columnPrice";
+            columnPrice.ReadOnly = true;
+            columnPrice.Width = 225;
+            // 
+            // columnCurrency
+            // 
+            columnCurrency.DataPropertyName = "ProductCurrency";
+            columnCurrency.HeaderText = "Currency";
+            columnCurrency.MinimumWidth = 11;
+            columnCurrency.Name = "columnCurrency";
+            columnCurrency.ReadOnly = true;
+            columnCurrency.Width = 225;
+            // 
+            // columnQuantity
+            // 
+            columnQuantity.DataPropertyName = "ProductQuantity";
+            columnQuantity.HeaderText = "Quantity";
+            columnQuantity.MinimumWidth = 11;
+            columnQuantity.Name = "columnQuantity";
+            columnQuantity.ReadOnly = true;
+            columnQuantity.Width = 225;
+            // 
+            // columnEAN
+            // 
+            columnEAN.DataPropertyName = "ProductEAN";
+            columnEAN.HeaderText = "EAN";
+            columnEAN.MinimumWidth = 11;
+            columnEAN.Name = "columnEAN";
+            columnEAN.ReadOnly = true;
+            columnEAN.Width = 225;
+            // 
+            // columnColor
+            // 
+            columnColor.DataPropertyName = "ProductColor";
+            columnColor.HeaderText = "Color";
+            columnColor.MinimumWidth = 11;
+            columnColor.Name = "columnColor";
+            columnColor.ReadOnly = true;
+            columnColor.Width = 225;
+            // 
+            // columnSize
+            // 
+            columnSize.DataPropertyName = "ProductSize";
+            columnSize.HeaderText = "Size";
+            columnSize.MinimumWidth = 11;
+            columnSize.Name = "columnSize";
+            columnSize.ReadOnly = true;
+            columnSize.Width = 225;
+            // 
+            // columnAvailability
+            // 
+            columnAvailability.DataPropertyName = "ProductAvailability";
+            columnAvailability.HeaderText = "Availability";
+            columnAvailability.MinimumWidth = 11;
+            columnAvailability.Name = "columnAvailability";
+            columnAvailability.ReadOnly = true;
+            columnAvailability.Width = 225;
+            // 
+            // columnInternalID
+            // 
+            columnInternalID.DataPropertyName = "InternalID";
+            columnInternalID.HeaderText = "Internal ID";
+            columnInternalID.MinimumWidth = 11;
+            columnInternalID.Name = "columnInternalID";
+            columnInternalID.ReadOnly = true;
+            columnInternalID.Width = 225;
             // 
             // UC_Inventory
             // 
@@ -569,7 +592,6 @@
         private Label lblCategory;
         private Label lblPrice;
         private Label lblDescription;
-        private TextBox txtID;
         private TextBox txtCurrency;
         private TextBox txtPrice;
         private TextBox txtCategory;
@@ -581,6 +603,15 @@
         private TextBox txtDescription;
         private Label lblQuantity;
         private GroupBox gbDeleteProduct;
+        private TextBox txtSize;
+        private Label lblAvailability;
+        private Label lblSize;
+        private Label lblColor;
+        private Label lblEAN;
+        private TextBox txtAvailability;
+        private TextBox txtInternalID;
+        private Label lblInternalID;
+        private TextBox txtID;
         private DataGridViewTextBoxColumn columnID;
         private DataGridViewTextBoxColumn columnName;
         private DataGridViewTextBoxColumn columnDescription;
@@ -592,14 +623,7 @@
         private DataGridViewTextBoxColumn columnEAN;
         private DataGridViewTextBoxColumn columnColor;
         private DataGridViewTextBoxColumn columnSize;
-        private TextBox txtSize;
-        private Label lblAvailability;
-        private Label lblSize;
-        private Label lblColor;
-        private Label lblEAN;
-        private TextBox txtAvailability;
         private DataGridViewTextBoxColumn columnAvailability;
-        private TextBox txtInternalID;
-        private Label lblInternalID;
+        private DataGridViewTextBoxColumn columnInternalID;
     }
 }
