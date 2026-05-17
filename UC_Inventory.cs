@@ -59,8 +59,9 @@ namespace Assignment3
             string color = txtColor.Text;
             string size = txtSize.Text;
             string availability = txtAvailability.Text;
+            int internalId = int.Parse(txtInternalID.Text);
 
-            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity, ean, color, size, availability);
+            Product newProduct = new Product(newId, name, description, brand, category, price, currency, quantity, ean, color, size, availability,internalId);
             _inventoryList.Add(newProduct);
 
             // 4. Refresh the grid to show the new item
@@ -139,6 +140,9 @@ namespace Assignment3
                     productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
                     productToUpdate.ProductEAN = txtEAN.Text;
                     productToUpdate.ProductColor = txtColor.Text;
+                    productToUpdate.ProductSize = txtSize.Text;
+                    productToUpdate.ProductAvailability = txtAvailability.Text;
+                    productToUpdate.InternalID = int.Parse(txtInternalID.Text);
 
                     // 5. Refresh the grid to show the updated data
                     _bindingSource.ResetBindings(false);

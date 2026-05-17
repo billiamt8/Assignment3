@@ -45,6 +45,7 @@
             columnEAN = new DataGridViewTextBoxColumn();
             columnColor = new DataGridViewTextBoxColumn();
             columnSize = new DataGridViewTextBoxColumn();
+            columnAvailability = new DataGridViewTextBoxColumn();
             gbProductDetails = new GroupBox();
             txtAvailability = new TextBox();
             txtSize = new TextBox();
@@ -72,7 +73,8 @@
             txtDescription = new TextBox();
             lblQuantity = new Label();
             gbDeleteProduct = new GroupBox();
-            columnAvailability = new DataGridViewTextBoxColumn();
+            lblInternalID = new Label();
+            txtInternalID = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             gbProductDetails.SuspendLayout();
             gbDeleteProduct.SuspendLayout();
@@ -112,7 +114,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(43, 824);
+            btnAddProduct.Location = new Point(43, 858);
             btnAddProduct.Margin = new Padding(6, 7, 6, 7);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(193, 57);
@@ -123,7 +125,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(399, 824);
+            btnUpdateProduct.Location = new Point(399, 858);
             btnUpdateProduct.Margin = new Padding(6, 7, 6, 7);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(193, 57);
@@ -236,8 +238,18 @@
             columnSize.ReadOnly = true;
             columnSize.Width = 225;
             // 
+            // columnAvailability
+            // 
+            columnAvailability.HeaderText = "Availability";
+            columnAvailability.MinimumWidth = 11;
+            columnAvailability.Name = "columnAvailability";
+            columnAvailability.ReadOnly = true;
+            columnAvailability.Width = 225;
+            // 
             // gbProductDetails
             // 
+            gbProductDetails.Controls.Add(txtInternalID);
+            gbProductDetails.Controls.Add(lblInternalID);
             gbProductDetails.Controls.Add(txtAvailability);
             gbProductDetails.Controls.Add(txtSize);
             gbProductDetails.Controls.Add(lblAvailability);
@@ -265,7 +277,7 @@
             gbProductDetails.Controls.Add(lblQuantity);
             gbProductDetails.Location = new Point(43, 19);
             gbProductDetails.Name = "gbProductDetails";
-            gbProductDetails.Size = new Size(563, 795);
+            gbProductDetails.Size = new Size(563, 829);
             gbProductDetails.TabIndex = 13;
             gbProductDetails.TabStop = false;
             gbProductDetails.Text = "Product Details";
@@ -464,7 +476,7 @@
             // 
             // btnClearProduct
             // 
-            btnClearProduct.Location = new Point(36, 708);
+            btnClearProduct.Location = new Point(36, 762);
             btnClearProduct.Margin = new Padding(6, 7, 6, 7);
             btnClearProduct.Name = "btnClearProduct";
             btnClearProduct.Size = new Size(465, 57);
@@ -502,13 +514,21 @@
             gbDeleteProduct.TabStop = false;
             gbDeleteProduct.Text = "Delete Product with ID/Name";
             // 
-            // columnAvailability
+            // lblInternalID
             // 
-            columnAvailability.HeaderText = "Availability";
-            columnAvailability.MinimumWidth = 11;
-            columnAvailability.Name = "columnAvailability";
-            columnAvailability.ReadOnly = true;
-            columnAvailability.Width = 225;
+            lblInternalID.AutoSize = true;
+            lblInternalID.Location = new Point(19, 711);
+            lblInternalID.Name = "lblInternalID";
+            lblInternalID.Size = new Size(140, 37);
+            lblInternalID.TabIndex = 21;
+            lblInternalID.Text = "Internal ID";
+            // 
+            // txtInternalID
+            // 
+            txtInternalID.Location = new Point(169, 708);
+            txtInternalID.Name = "txtInternalID";
+            txtInternalID.Size = new Size(332, 43);
+            txtInternalID.TabIndex = 22;
             // 
             // UC_Inventory
             // 
@@ -579,5 +599,7 @@
         private Label lblEAN;
         private TextBox txtAvailability;
         private DataGridViewTextBoxColumn columnAvailability;
+        private TextBox txtInternalID;
+        private Label lblInternalID;
     }
 }

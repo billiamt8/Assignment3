@@ -15,7 +15,7 @@ namespace Assignment3
         public static List<Product> LoadFromCSV(string filePath)
         {
             List<Product> products = new List<Product>();
-            using (var reader = new StreamReader("./products-100.csv"))
+            using (var reader = new StreamReader(filePath))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Read();
@@ -34,16 +34,10 @@ namespace Assignment3
         public static void SaveToCSV(string filePath, List<Product> products)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 // Match header exactly
-                writer.WriteLine("ProductID,ProductName,ProductDescription,ProductBrand,ProductCategory,Price,ProductCurrency,Quantity,ProductEAN,ProductColor,ProductSize,ProductAvailability");
-
-                foreach (var p in products)
-                {
-                    // Converts price back to cents for storage and includes quantity
-                    string line = $"{p.ProductID},{p.ProductName},{p.ProductDescription},{p.ProductBrand},{p.ProductCategory},{p.ProductPrice * 100},{p.ProductCurrency},{p.ProductQuantity},{p.ProductEAN},{p.ProductColor},{p.ProductSize},{p.ProductAvailability}";
-                    writer.WriteLine(line);
-                }
+                csv.WriteRecords(products);
             }
         }
     }

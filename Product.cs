@@ -21,12 +21,13 @@ namespace Assignment3
         public string ProductColor { get; set; }
         public string ProductSize { get; set; }
         public string ProductAvailability { get; set; }
+        public int InternalID { get; set; }
 
         public Product()
         {
 
         }
-        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity, string ean, string color, string size, string availability)
+        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity, string ean, string color, string size, string availability, int internalId)
         {
             ProductID = id;
             ProductName = name;
@@ -40,8 +41,9 @@ namespace Assignment3
             ProductColor = color;
             ProductSize = size;
             ProductAvailability = availability;
+            InternalID = internalId;
         }
-
+        
         public sealed class ProductMap : ClassMap<Product>
         {
             public ProductMap()
@@ -58,6 +60,7 @@ namespace Assignment3
                 Map(m => m.ProductColor).Name("ProductColor");
                 Map(m => m.ProductSize).Name("Size");
                 Map(m => m.ProductAvailability).Name("Availability");
+                Map(m => m.InternalID).Name("Internal ID");
             }
         }
     }
