@@ -4,8 +4,6 @@ namespace Assignment3
 {
     public partial class Main : Form
     {
-        private BindingList<Product> _inventoryList = new BindingList<Product>();
-        private string filePath = "./products-100.csv";
         public Main()
         {
             InitializeComponent();
@@ -18,7 +16,6 @@ namespace Assignment3
         {
             btnHome.Click += (s, e) => ShowScreen(new UC_Home());
             btnInventory.Click += (s, e) => ShowScreen(new UC_Inventory());
-            btnProducts.Click += (s, e) => ShowScreen(new UC_Products());
             btnBuildOrders.Click += (s, e) => ShowScreen(new UC_BuildOrders());
             btnCheckout.Click += (s, e) => ShowScreen(new UC_Checkout());
         }
@@ -50,17 +47,12 @@ namespace Assignment3
             {
                 HighlightButton(btnCheckout);
             }
-            else if (newScreen is UC_Products)
-            {
-                HighlightButton(btnProducts);
-            }
         }
 
         private void HighlightButton(Button buttonToHighlight)
         {
             btnHome.BackColor = Color.Turquoise;
             btnInventory.BackColor = Color.Turquoise;
-            btnProducts.BackColor = Color.Turquoise;
             btnBuildOrders.BackColor = Color.Turquoise;
             btnCheckout.BackColor = Color.Turquoise;
             btnExit.BackColor = Color.Red;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,16 @@ namespace Assignment3
         public decimal ProductPrice { get; set; }
         public string ProductCurrency { get; set; }
         public int ProductQuantity { get; set; }
-        public int ProductEAN { get; set; }
+        public string ProductEAN { get; set; }
         public string ProductColor { get; set; }
+        public string ProductSize { get; set; }
+        public string ProductAvailability { get; set; }
 
-        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity, int ean, string color)
+        public Product()
+        {
+
+        }
+        public Product(int id, string name, string description, string brand, string category, decimal price, string currency, int quantity, string ean, string color, string size, string availability)
         {
             ProductID = id;
             ProductName = name;
@@ -31,7 +38,27 @@ namespace Assignment3
             ProductQuantity = quantity;
             ProductEAN = ean;
             ProductColor = color;
+            ProductSize = size;
+            ProductAvailability = availability;
         }
 
+        public sealed class ProductMap : ClassMap<Product>
+        {
+            public ProductMap()
+            {
+                Map(m => m.ProductID).Name("ProductID");
+                Map(m => m.ProductName).Name("ProductName");
+                Map(m => m.ProductDescription).Name("ProductDescription"); 
+                Map(m => m.ProductBrand).Name("ProductBrand");
+                Map(m => m.ProductCategory).Name("ProductCategory");
+                Map(m => m.ProductPrice).Name("Price");
+                Map(m => m.ProductCurrency).Name("ProductCurrency");
+                Map(m => m.ProductQuantity).Name("Quantity");
+                Map(m => m.ProductEAN).Name("ProductEAN");
+                Map(m => m.ProductColor).Name("ProductColor");
+                Map(m => m.ProductSize).Name("Size");
+                Map(m => m.ProductAvailability).Name("Availability");
+            }
+        }
     }
 }
