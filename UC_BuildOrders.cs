@@ -27,23 +27,19 @@ namespace Assignment3
 
         private void SetupOrderSystem()
         {
-            // Apply these settings to the Inventory grid
             dgvAvailable.ReadOnly = true;
             dgvAvailable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAvailable.MultiSelect = false; // Prevents selecting multiple rows at once
+            dgvAvailable.MultiSelect = false;
 
-            // Apply these settings to the Current Order grid
             dgvCurrentOrder.ReadOnly = true;
             dgvCurrentOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCurrentOrder.MultiSelect = false;
 
-            // Configure Inventory Grid (Left)
             dgvAvailable.AutoGenerateColumns = false;
             dgvAvailable.Columns.Clear();
             dgvAvailable.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProductID", HeaderText = "ID", Name = "colID", Width = 50 });
             dgvAvailable.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProductName", HeaderText = "Product Name", Name = "colName", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
 
-            // Configure Current Order Grid (Right)
             dgvCurrentOrder.AutoGenerateColumns = false;
             dgvCurrentOrder.Columns.Clear();
             dgvCurrentOrder.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProductID", HeaderText = "ID", Width = 50 });
@@ -78,7 +74,7 @@ namespace Assignment3
                 dgvAvailable.DoDragDrop(product, DragDropEffects.Copy);
             }
         }
-  private void dgvCurrentOrder_DragEnter(object sender, DragEventArgs e)
+        private void dgvCurrentOrder_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(Product)))
                 e.Effect = DragDropEffects.Copy;
